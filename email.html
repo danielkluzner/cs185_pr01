@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Email</title>
     <link rel="stylesheet" href="style.css">
+    <script src="email_script.js"></script>
 </head>
 
 <body>
@@ -21,8 +22,9 @@
         <form>
             <label for="email">e-mail:<div style="color:red; display:inline-block;">*</div></label><br>
             <input type="text" id="email" name="email" placeholder="example@email.com" required><br><br>
+            <div id="submit-message"></div>
 
-            <p><input type="submit" value="Submit"></p>
+            <p><input id="email-submit" type="button" value="Submit"></p>
         </form>
     </p>
 
