@@ -1,15 +1,13 @@
 document.addEventListener("DOMContentLoaded",
-    function(){
+    function(event){
         
-        function checkEmailFormat(){
+        function checkEmailFormat(event){
             var input = document.getElementById("email").value;
             var at_char = input.lastIndexOf("@");
-            var dot = input.lastIndexOf(".");
+            var com = input.indexOf(".edu");
+            var edu = input.indexOf(".com");
             var message = "Invalid email address";
-            console.log(at_char);
-            console.log(dot);
-            console.log(input.length);
-            if(at_char > 0 && dot > at_char + 1 && dot != input.length - 1){
+            if(at_char > 0 && (com > at_char + 1 || edu > at_char + 1) && (com == input.length - 4 || edu == input.length - 4)){
                 message = "Email successfully recorded";
             }
             document.getElementById("submit-message").textContent = message;
