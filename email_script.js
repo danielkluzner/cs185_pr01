@@ -7,7 +7,11 @@ document.addEventListener("DOMContentLoaded",
             var com = input.indexOf(".edu");
             var edu = input.indexOf(".com");
             var message = "Invalid email address";
-            if(at_char > 0 && (com > at_char + 1 || edu > at_char + 1) && (com == input.length - 4 || edu == input.length - 4)){
+
+            // condition to check that there's at least 1 character between @ and .edu/.com
+            // (com > at_char + 1 || edu > at_char + 1)
+
+            if(at_char > 0 && (com == input.length - 4 || edu == input.length - 4)){
                 message = "Email successfully recorded";
             }
             document.getElementById("submit-message").textContent = message;
